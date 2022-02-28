@@ -1,13 +1,3 @@
-$ sudo groupadd docker
-
-$ sudo gpasswd -a $USER docker
-
-$ sudo usermod -aG docker $USER
-
-$ sudo service docker restart
-
-
-
 Если вы не хотите каждый раз вводить sudo при запуске команды docker, добавьте свое имя пользователя в группу docker:
 
     sudo usermod -aG docker ${USER}
@@ -29,4 +19,16 @@ sammy sudo docker
 
     sudo usermod -aG docker username
 
-В дальнейшем в статье подразумевается, что вы запускаете команду docker от имени пользователя в группе docker. В обратном случае вам необходимо добавлять к командам префикс sudo.
+В дальнейшем подразумевается, что вы запускаете команду docker от имени пользователя в группе docker. В обратном случае вам необходимо добавлять к командам префикс sudo.
+
+
+Ещё манипуляции с пользаками 
+
+    $ sudo groupadd docker
+   
+    $ sudo gpasswd -a $USER docker
+    
+    $ sudo usermod -aG docker $USER
+    
+    $ sudo service docker restart
+    
